@@ -260,7 +260,7 @@ public class Login extends javax.swing.JFrame {
             boolean result = dao.login(userTxt.getText(), passTxt.getText());
             if (result) {
                 // Si son correctos, abrimos el formulario Dashboard
-                JOptionPane.showMessageDialog(null, "Bienvenido " + userTxt.getText(), "Inicio de Sesión", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Bienvenido Wilmar Felipe Sosa", "Inicio de Sesión", JOptionPane.INFORMATION_MESSAGE);
                 Dashboard form = new Dashboard();
                 form.setVisible(true);
                 dispose();
