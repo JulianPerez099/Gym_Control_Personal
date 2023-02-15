@@ -26,6 +26,7 @@ public class Dashboard extends javax.swing.JFrame {
 
     int xMouse, yMouse;
 
+    
     public Dashboard() {
         initComponents();
         InitStyles();
@@ -123,6 +124,7 @@ public class Dashboard extends javax.swing.JFrame {
         setResizable(false);
 
         background.setBackground(new java.awt.Color(255, 255, 255));
+        background.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         background.setPreferredSize(new java.awt.Dimension(1141, 670));
 
         menu.setBackground(new java.awt.Color(13, 71, 161));
@@ -397,7 +399,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGap(60, 60, 60)
                 .addComponent(header, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, 448, Short.MAX_VALUE)
+                .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, 454, Short.MAX_VALUE)
                 .addGap(1, 1, 1))
             .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
@@ -412,7 +414,7 @@ public class Dashboard extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, 667, Short.MAX_VALUE)
+            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, 673, Short.MAX_VALUE)
         );
 
         pack();
@@ -462,7 +464,7 @@ public class Dashboard extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         FlatMaterialLighterIJTheme.setup();
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

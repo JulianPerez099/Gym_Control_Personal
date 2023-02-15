@@ -54,6 +54,11 @@
             <artifactId>javafx-controls</artifactId>
             <version>14</version>
         </dependency>
+        <dependency>
+            <groupId>org.swinglabs.swingx</groupId>
+            <artifactId>swingx-core</artifactId>
+            <version>1.6.5-1</version>
+        </dependency>
     </dependencies>
     <!-- 
 <build>
