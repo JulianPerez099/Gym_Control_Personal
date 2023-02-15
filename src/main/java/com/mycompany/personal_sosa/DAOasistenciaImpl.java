@@ -167,7 +167,7 @@ public class DAOasistenciaImpl extends Database implements DAOasistencia {
             this.Conectar();
             PreparedStatement st1
                     = this.conexion.prepareStatement(
-                            "UPDATE rutinas SET Ejercicio_1=?,Ejercicio_2=?,Ejercicio_3=?,Ejercicio_4=?,Ejercicio_5=?,Ejercicio_6=?,Ejercicio_7=?,Ejercicio_8=?,Ejercicio_9=?,Ejercicio_10=?,Ejercicio_11=?,Ejercicio_12=?,Ejercicio_13=?,Ejercicio_14=?,Ejercicio_15=? WHERE id_usuario=?"
+                            "UPDATE rutinas SET Ejercicio_1=?,Ejercicio_2=?,Ejercicio_3=?,Ejercicio_4=?,Ejercicio_5=?,Ejercicio_6=?,Ejercicio_7=?,Ejercicio_8=?,Ejercicio_9=?,Ejercicio_10=?,Ejercicio_11=?,Ejercicio_12=?,Ejercicio_13=?,Ejercicio_14=?,Ejercicio_15=? WHERE id_rutinas=?", Statement.RETURN_GENERATED_KEYS
                     );
             st1.setString(1, personal.getEjercicio_1());
             st1.setString(2, personal.getEjercicio_2());
@@ -184,12 +184,17 @@ public class DAOasistenciaImpl extends Database implements DAOasistencia {
             st1.setString(13, personal.getEjercicio_13());
             st1.setString(14, personal.getEjercicio_14());
             st1.setString(15, personal.getEjercicio_15());
-            st1.setInt(16, personal.getID_Usuario());
+            st1.setInt(16, personal.getID_Rutinas());
             st1.executeUpdate();
+            ResultSet rs = st1.getGeneratedKeys();
+            int id_usuario = 0;
+            if (rs.next()) {
+                id_usuario = rs.getInt(1);
+            }
 
             PreparedStatement st2
                     = this.conexion.prepareStatement(
-                            "UPDATE series SET Serie_1=?,Serie_2=?,Serie_3=? WHERE id_usuario=?"
+                            "UPDATE series SET Serie_1=?,Serie_2=?,Serie_3=? WHERE id_Series=?"
                     );
             st2.setString(1, personal.getSerie_1());
             st2.setString(2, personal.getSerie_2());
@@ -199,7 +204,7 @@ public class DAOasistenciaImpl extends Database implements DAOasistencia {
 
             PreparedStatement st3
                     = this.conexion.prepareStatement(
-                            "UPDATE tiempos SET Tiempo_1=?,Tiempo_2=?,Tiempo_3=?,Tiempo_4=?,Tiempo_5=?,Tiempo_6=?,Tiempo_7=?,Tiempo_8=?,Tiempo_9=?,Tiempo_10=?,Tiempo_11=?,Tiempo_12=?,Tiempo_13=?,Tiempo_14=?,Tiempo_15=? WHERE id_usuario=?"
+                            "UPDATE tiempos SET Tiempo_1=?,Tiempo_2=?,Tiempo_3=?,Tiempo_4=?,Tiempo_5=?,Tiempo_6=?,Tiempo_7=?,Tiempo_8=?,Tiempo_9=?,Tiempo_10=?,Tiempo_11=?,Tiempo_12=?,Tiempo_13=?,Tiempo_14=?,Tiempo_15=? WHERE id_Tiempos=?"
                     );
             st3.setString(1, personal.getTiempo_1());
             st3.setString(2, personal.getTiempo_2());
@@ -221,7 +226,7 @@ public class DAOasistenciaImpl extends Database implements DAOasistencia {
 
             PreparedStatement st4
                     = this.conexion.prepareStatement(
-                            "UPDATE Repeticiones SET Repeticion_1=?,Repeticion_2=?,Repeticion_3=?,Repeticion_4=?,Repeticion_5=?,Repeticion_6=?,Repeticion_7=?,Repeticion_8=?,Repeticion_9=?,Repeticion_10=?,Repeticion_11=?,Repeticion_12=?,Repeticion_13=?,Repeticion_14=?,Repeticion_15=? WHERE id_usuario=?"
+                            "UPDATE Repeticiones SET Repeticion_1=?,Repeticion_2=?,Repeticion_3=?,Repeticion_4=?,Repeticion_5=?,Repeticion_6=?,Repeticion_7=?,Repeticion_8=?,Repeticion_9=?,Repeticion_10=?,Repeticion_11=?,Repeticion_12=?,Repeticion_13=?,Repeticion_14=?,Repeticion_15=? WHERE id_Repeticiones=?"
                     );
             st4.setString(1, personal.getRepeticion_1());
             st4.setString(2, personal.getRepeticion_2());
@@ -243,7 +248,7 @@ public class DAOasistenciaImpl extends Database implements DAOasistencia {
 
             PreparedStatement st5
                     = this.conexion.prepareStatement(
-                            "UPDATE detallesDebe SET Debe=?,Total_Deuda=? WHERE id_usuario=?"
+                            "UPDATE detallesDebe SET Debe=?,Total_Deuda=? WHERE id_debe=?"
                     );
             st5.setString(1, personal.getDebe());
             st5.setDouble(2, personal.getTotal_Deuda());
@@ -252,7 +257,7 @@ public class DAOasistenciaImpl extends Database implements DAOasistencia {
 
             PreparedStatement st6
                     = this.conexion.prepareStatement(
-                            "UPDATE entrenamientos SET Fecha_de_Entrenamiento=? WHERE id_usuario=?"
+                            "UPDATE entrenamientos SET Fecha_de_Entrenamiento=? WHERE id_entrenamiento=?"
                     );
             st6.setString(1, personal.getFecha_de_Entrenamiento());
             st6.setInt(2, personal.getID_Usuario());

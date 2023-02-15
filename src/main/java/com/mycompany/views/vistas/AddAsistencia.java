@@ -9,6 +9,7 @@ import com.mycompany.personal_sosa.DAOrutinasImpl;
 import com.mycompany.models.Asistencia;
 import com.mycompany.models.Personal;
 import com.mycompany.models.Rutinas;
+import com.mycompany.personal_sosa.Dashboard;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -283,7 +284,6 @@ public class AddAsistencia extends javax.swing.JPanel {
         Estado = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         Total = new javax.swing.JTextField();
-        btn_Cancel = new javax.swing.JButton();
         btn_Save = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
@@ -439,7 +439,7 @@ public class AddAsistencia extends javax.swing.JPanel {
         jLabel4.setText("Pago");
         bg.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 200, 40));
 
-        Estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Debe", "Pago" }));
+        Estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Si", "No" }));
         Estado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EstadoActionPerformed(evt);
@@ -461,18 +461,6 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         bg.add(Total, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 100, 40));
 
-        btn_Cancel.setBackground(new java.awt.Color(13, 71, 161));
-        btn_Cancel.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        btn_Cancel.setForeground(new java.awt.Color(255, 255, 255));
-        btn_Cancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cancel.png"))); // NOI18N
-        btn_Cancel.setText("Cancelar");
-        btn_Cancel.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
-        btn_Cancel.setBorderPainted(false);
-        btn_Cancel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn_Cancel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btn_Cancel.setIconTextGap(15);
-        bg.add(btn_Cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 404, 160, 45));
-
         btn_Save.setBackground(new java.awt.Color(13, 71, 161));
         btn_Save.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         btn_Save.setForeground(new java.awt.Color(255, 255, 255));
@@ -482,13 +470,13 @@ public class AddAsistencia extends javax.swing.JPanel {
         btn_Save.setBorderPainted(false);
         btn_Save.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_Save.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btn_Save.setIconTextGap(15);
+        btn_Save.setIconTextGap(20);
         btn_Save.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_SaveActionPerformed(evt);
             }
         });
-        bg.add(btn_Save, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 404, 140, 45));
+        bg.add(btn_Save, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 404, 300, 45));
 
         jTabbedPane1.setToolTipText("");
 
@@ -1630,7 +1618,6 @@ public class AddAsistencia extends javax.swing.JPanel {
     private javax.swing.JTextField Total;
     private javax.swing.JTextField Usuario;
     private javax.swing.JPanel bg;
-    private javax.swing.JButton btn_Cancel;
     private javax.swing.JButton btn_Save;
     private javax.swing.JLabel imagePersonal;
     private javax.swing.JLabel jLabel1;

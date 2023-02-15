@@ -128,7 +128,6 @@ public class AddUser extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         IMC = new javax.swing.JTextField();
         btn_Save = new javax.swing.JButton();
-        btn_Cancel = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel9 = new javax.swing.JLabel();
         Contacto_emergencia = new javax.swing.JTextField();
@@ -261,30 +260,13 @@ public class AddUser extends javax.swing.JPanel {
         btn_Save.setBorderPainted(false);
         btn_Save.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_Save.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btn_Save.setIconTextGap(15);
+        btn_Save.setIconTextGap(20);
         btn_Save.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_SaveActionPerformed(evt);
             }
         });
-        bg.add(btn_Save, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 404, 140, 45));
-
-        btn_Cancel.setBackground(new java.awt.Color(13, 71, 161));
-        btn_Cancel.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        btn_Cancel.setForeground(new java.awt.Color(255, 255, 255));
-        btn_Cancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cancel.png"))); // NOI18N
-        btn_Cancel.setText("Cancelar");
-        btn_Cancel.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
-        btn_Cancel.setBorderPainted(false);
-        btn_Cancel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn_Cancel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btn_Cancel.setIconTextGap(15);
-        btn_Cancel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_CancelActionPerformed(evt);
-            }
-        });
-        bg.add(btn_Cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 404, 160, 45));
+        bg.add(btn_Save, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 404, 300, 45));
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -523,10 +505,6 @@ public class AddUser extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_Cual_lesionActionPerformed
 
-    private void btn_CancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CancelActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_CancelActionPerformed
-
     private void btn_SaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SaveActionPerformed
         //Formato para obtener la fecha como tal
         SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
@@ -674,7 +652,6 @@ public class AddUser extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> Tiene_lesiones;
     private javax.swing.JComboBox<String> Toma_medicamentos;
     private javax.swing.JPanel bg;
-    private javax.swing.JButton btn_Cancel;
     private javax.swing.JButton btn_Save;
     private com.toedter.calendar.JDateChooser fecha_nacimiento;
     private javax.swing.JLabel imagePersonal;

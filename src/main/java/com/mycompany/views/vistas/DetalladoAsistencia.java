@@ -143,14 +143,27 @@ public class DetalladoAsistencia extends javax.swing.JPanel {
             for (Asistencia u : usuarios) {
                 if (u.getDebe().equals("Debe")) {
                     int id = u.getID_Entrenamiento();
+                    ID.addItem(id + " - Debe");
+                } else if (u.getDebe().equals("Pago")) {
+                    int id = u.getID_Entrenamiento();
+                    ID.addItem(id + " - Pago");
+                } else {
+                    int id = u.getID_Entrenamiento();
                     ID.addItem(String.valueOf(id));
                 }
             }
+
             ID.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    String selectedID = (String) ID.getSelectedItem();
-                    int id = Integer.parseInt(selectedID);
+                    // Obtener el elemento seleccionado del JComboBox
+                    String seleccionado = (String) ID.getSelectedItem();
+
+                    // Separar la información del ID de la información de si debe o ha pagado
+                    String[] partes = seleccionado.split(" ");
+                    int id = Integer.parseInt(partes[0]);
+                    String tipo = partes.length > 1 ? partes[1] : "";
+
                     for (Asistencia u : usuarios) {
                         if (u.getID_Entrenamiento() == id) {
                             String nombreApellido = u.getNombre_Usuario() + " " + u.getApellido_Usuario();
@@ -221,6 +234,7 @@ public class DetalladoAsistencia extends javax.swing.JPanel {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+
         try {
             DAOrutinas dao = new DAOrutinasImpl();
             List<Rutinas> usuarios = dao.listar("", "", "");
@@ -261,7 +275,6 @@ public class DetalladoAsistencia extends javax.swing.JPanel {
         Estado = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         Total = new javax.swing.JTextField();
-        btn_Cancel = new javax.swing.JButton();
         btn_Save = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
@@ -437,18 +450,6 @@ public class DetalladoAsistencia extends javax.swing.JPanel {
         });
         bg.add(Total, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 100, 40));
 
-        btn_Cancel.setBackground(new java.awt.Color(13, 71, 161));
-        btn_Cancel.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        btn_Cancel.setForeground(new java.awt.Color(255, 255, 255));
-        btn_Cancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cancel.png"))); // NOI18N
-        btn_Cancel.setText("Cancelar");
-        btn_Cancel.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
-        btn_Cancel.setBorderPainted(false);
-        btn_Cancel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn_Cancel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btn_Cancel.setIconTextGap(15);
-        bg.add(btn_Cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 404, 160, 45));
-
         btn_Save.setBackground(new java.awt.Color(13, 71, 161));
         btn_Save.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         btn_Save.setForeground(new java.awt.Color(255, 255, 255));
@@ -458,13 +459,13 @@ public class DetalladoAsistencia extends javax.swing.JPanel {
         btn_Save.setBorderPainted(false);
         btn_Save.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_Save.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btn_Save.setIconTextGap(15);
+        btn_Save.setIconTextGap(20);
         btn_Save.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_SaveActionPerformed(evt);
             }
         });
-        bg.add(btn_Save, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 404, 140, 45));
+        bg.add(btn_Save, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 404, 300, 45));
 
         jTabbedPane1.setToolTipText("");
 
@@ -1218,7 +1219,9 @@ public class DetalladoAsistencia extends javax.swing.JPanel {
 
         String Fentrenamiento = formatoFecha.format(fecha_de_entrenamiento);
 
-        int ID_Usuario = Integer.parseInt((String) ID.getSelectedItem());
+        String selectedItem = (String) ID.getSelectedItem();
+        String selectedItemWithoutText = selectedItem.replace(" - Pago", "").replace(" - Debe", "");
+        int ID_Usuario = Integer.parseInt(selectedItemWithoutText);
 
         String Pago = (String) Estado.getSelectedItem();
 
@@ -1547,7 +1550,6 @@ public class DetalladoAsistencia extends javax.swing.JPanel {
     private javax.swing.JTextField Total;
     private javax.swing.JTextField Usuario;
     private javax.swing.JPanel bg;
-    private javax.swing.JButton btn_Cancel;
     private javax.swing.JButton btn_Save;
     private javax.swing.JLabel imagePersonal;
     private javax.swing.JLabel jLabel1;
