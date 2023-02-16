@@ -13,29 +13,34 @@ import javax.swing.JOptionPane;
  */
 public class Database {
 
-    protected Connection conexion;
-    
-    private final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private final String DB_URL = "jdbc:mysql://localhost/YOUR_DATABASE_NAME";
+  protected Connection conexion;
 
-    private final String USER = "root";
-    private final String PASS = "";
+  private final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+  private final String DB_URL = "jdbc:mysql://localhost/YOUR_DATABASE_NAME";
 
-    public void Conectar() throws ClassNotFoundException {
-        try {
-            conexion = (Connection) DriverManager.getConnection(DB_URL, USER, PASS);
-            Class.forName(JDBC_DRIVER);
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al conectarse a la base de datos", "Error", JOptionPane.ERROR_MESSAGE);
-            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
-        }
+  private final String USER = "root";
+  private final String PASS = "";
+
+  public void Conectar() throws ClassNotFoundException {
+    try {
+      conexion = (Connection) DriverManager.getConnection(DB_URL, USER, PASS);
+      Class.forName(JDBC_DRIVER);
+    } catch (SQLException ex) {
+      JOptionPane.showMessageDialog(
+        null,
+        "Error al conectarse a la base de datos",
+        "Error",
+        JOptionPane.ERROR_MESSAGE
+      );
+      Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
     }
+  }
 
-    public void Cerrar() throws SQLException {
-        if (conexion != null) {
-            if (!conexion.isClosed()) {
-                conexion.close();
-            }
-        }
+  public void Cerrar() throws SQLException {
+    if (conexion != null) {
+      if (!conexion.isClosed()) {
+        conexion.close();
+      }
     }
+  }
 }
