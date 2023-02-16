@@ -31,9 +31,9 @@ public class AddTrain extends javax.swing.JPanel {
     private void InitStyles() {
         navtext.putClientProperty("FlatLaf.style", "font: bold 24 $h1.regular.font");
         navtext.setForeground(Color.white);
-        jLabel1.setForeground(Color.black);
-        jLabel2.setForeground(Color.black);
-        jLabel3.setForeground(Color.black);
+        jLabel1.setForeground(Color.white);
+        jLabel2.setForeground(Color.white);
+        jLabel3.setForeground(Color.white);
         NameTrain.putClientProperty("JTextField.placeholderText", "Ingrese el nombre del ejercicio.");
         jTextArea1.putClientProperty("JTextField.placeholderText", "Ingrese una descripcion del ejercicio.");
         NameTrain.setForeground(Color.black);

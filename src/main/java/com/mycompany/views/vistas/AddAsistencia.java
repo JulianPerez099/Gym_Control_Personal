@@ -43,63 +43,63 @@ public class AddAsistencia extends javax.swing.JPanel {
 
     private void InitStyles() throws ParseException {
         //Colores de los Labels
-        jLabel1.setForeground(Color.black);
-        jLabel2.setForeground(Color.black);
-        jLabel3.setForeground(Color.black);
-        jLabel4.setForeground(Color.black);
-        jLabel5.setForeground(Color.black);
-        jLabel6.setForeground(Color.black);
-        jLabel7.setForeground(Color.black);
-        jLabel8.setForeground(Color.black);
-        jLabel9.setForeground(Color.black);
-        jLabel10.setForeground(Color.black);
-        jLabel21.setForeground(Color.black);
-        jLabel41.setForeground(Color.black);
-        jLabel42.setForeground(Color.black);
-        jLabel43.setForeground(Color.black);
-        jLabel21.setForeground(Color.black);
-        jLabel22.setForeground(Color.black);
-        jLabel23.setForeground(Color.black);
-        jLabel24.setForeground(Color.black);
-        jLabel25.setForeground(Color.black);
-        jLabel26.setForeground(Color.black);
-        jLabel35.setForeground(Color.black);
-        jLabel36.setForeground(Color.black);
-        jLabel37.setForeground(Color.black);
-        jLabel38.setForeground(Color.black);
-        jLabel39.setForeground(Color.black);
-        jLabel40.setForeground(Color.black);
-        jLabel41.setForeground(Color.black);
-        jLabel42.setForeground(Color.black);
-        jLabel43.setForeground(Color.black);
-        jLabel44.setForeground(Color.black);
-        jLabel45.setForeground(Color.black);
-        jLabel46.setForeground(Color.black);
-        jLabel47.setForeground(Color.black);
-        jLabel48.setForeground(Color.black);
-        jLabel49.setForeground(Color.black);
-        jLabel50.setForeground(Color.black);
-        jLabel51.setForeground(Color.black);
-        jLabel52.setForeground(Color.black);
-        jLabel53.setForeground(Color.black);
-        jLabel54.setForeground(Color.black);
-        jLabel55.setForeground(Color.black);
-        jLabel56.setForeground(Color.black);
-        jLabel57.setForeground(Color.black);
-        jLabel58.setForeground(Color.black);
-        jLabel59.setForeground(Color.black);
-        jLabel60.setForeground(Color.black);
-        jLabel61.setForeground(Color.black);
-        jLabel62.setForeground(Color.black);
-        jLabel63.setForeground(Color.black);
-        jLabel64.setForeground(Color.black);
-        jLabel65.setForeground(Color.black);
-        jLabel66.setForeground(Color.black);
-        jLabel67.setForeground(Color.black);
-        jLabel68.setForeground(Color.black);
-        jLabel69.setForeground(Color.black);
-        jLabel70.setForeground(Color.black);
-        jLabel71.setForeground(Color.black);
+        jLabel1.setForeground(Color.white);
+        jLabel2.setForeground(Color.white);
+        jLabel3.setForeground(Color.white);
+        jLabel4.setForeground(Color.white);
+        jLabel5.setForeground(Color.white);
+        jLabel6.setForeground(Color.white);
+        jLabel7.setForeground(Color.white);
+        jLabel8.setForeground(Color.white);
+        jLabel9.setForeground(Color.white);
+        jLabel10.setForeground(Color.white);
+        jLabel21.setForeground(Color.white);
+        jLabel41.setForeground(Color.white);
+        jLabel42.setForeground(Color.white);
+        jLabel43.setForeground(Color.white);
+        jLabel21.setForeground(Color.white);
+        jLabel22.setForeground(Color.white);
+        jLabel23.setForeground(Color.white);
+        jLabel24.setForeground(Color.white);
+        jLabel25.setForeground(Color.white);
+        jLabel26.setForeground(Color.white);
+        jLabel35.setForeground(Color.white);
+        jLabel36.setForeground(Color.white);
+        jLabel37.setForeground(Color.white);
+        jLabel38.setForeground(Color.white);
+        jLabel39.setForeground(Color.white);
+        jLabel40.setForeground(Color.white);
+        jLabel41.setForeground(Color.white);
+        jLabel42.setForeground(Color.white);
+        jLabel43.setForeground(Color.white);
+        jLabel44.setForeground(Color.white);
+        jLabel45.setForeground(Color.white);
+        jLabel46.setForeground(Color.white);
+        jLabel47.setForeground(Color.white);
+        jLabel48.setForeground(Color.white);
+        jLabel49.setForeground(Color.white);
+        jLabel50.setForeground(Color.white);
+        jLabel51.setForeground(Color.white);
+        jLabel52.setForeground(Color.white);
+        jLabel53.setForeground(Color.white);
+        jLabel54.setForeground(Color.white);
+        jLabel55.setForeground(Color.white);
+        jLabel56.setForeground(Color.white);
+        jLabel57.setForeground(Color.white);
+        jLabel58.setForeground(Color.white);
+        jLabel59.setForeground(Color.white);
+        jLabel60.setForeground(Color.white);
+        jLabel61.setForeground(Color.white);
+        jLabel62.setForeground(Color.white);
+        jLabel63.setForeground(Color.white);
+        jLabel64.setForeground(Color.white);
+        jLabel65.setForeground(Color.white);
+        jLabel66.setForeground(Color.white);
+        jLabel67.setForeground(Color.white);
+        jLabel68.setForeground(Color.white);
+        jLabel69.setForeground(Color.white);
+        jLabel70.setForeground(Color.white);
+        jLabel71.setForeground(Color.white);
         Usuario.setForeground(Color.black);
         Total.setForeground(Color.black);
         ID.setForeground(Color.black);
@@ -398,7 +398,9 @@ public class AddAsistencia extends javax.swing.JPanel {
 
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("ID");
         bg.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 40));
@@ -411,7 +413,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         bg.add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 100, 40));
 
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Usuario");
         bg.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 220, 40));
@@ -426,7 +430,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         bg.add(Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 200, 40));
 
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Fecha");
         bg.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 300, 40));
@@ -434,7 +440,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         Fecha_de_Entrenamiento.setBackground(new java.awt.Color(255, 255, 255));
         bg.add(Fecha_de_Entrenamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 300, 40));
 
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Pago");
         bg.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 200, 40));
@@ -447,7 +455,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         bg.add(Estado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 200, 40));
 
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Total");
         bg.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 100, 40));
@@ -476,13 +486,15 @@ public class AddAsistencia extends javax.swing.JPanel {
                 btn_SaveActionPerformed(evt);
             }
         });
-        bg.add(btn_Save, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 404, 300, 45));
+        bg.add(btn_Save, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 405, 300, 45));
 
         jTabbedPane1.setToolTipText("");
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Ejercicio 1");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 135, 40));
@@ -494,7 +506,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel1.add(Ejercicio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 135, 40));
 
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Ejercicio 2");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 135, 40));
@@ -506,7 +520,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel1.add(Ejercicio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 135, 40));
 
+        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Ejercicio 3");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 135, 40));
@@ -518,7 +534,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel1.add(Ejercicio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 135, 40));
 
+        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
         jLabel9.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Ejercicio 4");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 135, 40));
@@ -530,7 +548,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel1.add(Ejercicio4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 135, 40));
 
+        jLabel10.setBackground(new java.awt.Color(255, 255, 255));
         jLabel10.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Ejercicio 5");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 135, 40));
@@ -542,7 +562,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel1.add(Ejercicio5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 135, 40));
 
+        jLabel23.setBackground(new java.awt.Color(255, 255, 255));
         jLabel23.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel23.setText("Tiempo (s)");
         jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 135, 40));
@@ -555,7 +577,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel1.add(Tiempo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 135, 40));
 
+        jLabel24.setBackground(new java.awt.Color(255, 255, 255));
         jLabel24.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel24.setText("Tiempo (s)");
         jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 135, 40));
@@ -568,7 +592,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel1.add(Tiempo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 135, 40));
 
+        jLabel25.setBackground(new java.awt.Color(255, 255, 255));
         jLabel25.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel25.setText("Tiempo (s)");
         jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 135, 40));
@@ -581,7 +607,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel1.add(Tiempo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 135, 40));
 
+        jLabel26.setBackground(new java.awt.Color(255, 255, 255));
         jLabel26.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
         jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel26.setText("Tiempo (s)");
         jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 135, 40));
@@ -594,7 +622,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel1.add(Tiempo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 135, 40));
 
+        jLabel35.setBackground(new java.awt.Color(255, 255, 255));
         jLabel35.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(255, 255, 255));
         jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel35.setText("Tiempo (s)");
         jPanel1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 135, 40));
@@ -607,7 +637,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel1.add(Tiempo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, 135, 40));
 
+        jLabel22.setBackground(new java.awt.Color(255, 255, 255));
         jLabel22.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel22.setText("Repeticiones");
         jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 135, 40));
@@ -620,7 +652,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel1.add(Repeticiones1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 50, 135, 40));
 
+        jLabel36.setBackground(new java.awt.Color(255, 255, 255));
         jLabel36.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
         jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel36.setText("Repeticiones");
         jPanel1.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 90, 135, 40));
@@ -633,7 +667,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel1.add(Repeticiones2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 130, 135, 40));
 
+        jLabel37.setBackground(new java.awt.Color(255, 255, 255));
         jLabel37.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(255, 255, 255));
         jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel37.setText("Repeticiones");
         jPanel1.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 135, 40));
@@ -646,7 +682,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel1.add(Repeticiones3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 210, 135, 40));
 
+        jLabel38.setBackground(new java.awt.Color(255, 255, 255));
         jLabel38.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel38.setForeground(new java.awt.Color(255, 255, 255));
         jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel38.setText("Repeticiones");
         jPanel1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 135, 40));
@@ -659,7 +697,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel1.add(Repeticiones4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 290, 135, 40));
 
+        jLabel39.setBackground(new java.awt.Color(255, 255, 255));
         jLabel39.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
         jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel39.setText("Repeticiones");
         jPanel1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 330, 135, 40));
@@ -672,7 +712,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel1.add(Repeticiones5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 370, 135, 40));
 
+        jLabel40.setBackground(new java.awt.Color(255, 255, 255));
         jLabel40.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(255, 255, 255));
         jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel40.setText("Series");
         jPanel1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 330, 60, 40));
@@ -692,7 +734,9 @@ public class AddAsistencia extends javax.swing.JPanel {
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel21.setBackground(new java.awt.Color(255, 255, 255));
         jLabel21.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("Ejercicio 6");
         jPanel2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 135, 40));
@@ -704,7 +748,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel2.add(Ejercicio16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 135, 40));
 
+        jLabel41.setBackground(new java.awt.Color(255, 255, 255));
         jLabel41.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(255, 255, 255));
         jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel41.setText("Ejercicio 7");
         jPanel2.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 135, 40));
@@ -716,7 +762,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel2.add(Ejercicio17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 135, 40));
 
+        jLabel42.setBackground(new java.awt.Color(255, 255, 255));
         jLabel42.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(255, 255, 255));
         jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel42.setText("Ejercicio 8");
         jPanel2.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 135, 40));
@@ -728,7 +776,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel2.add(Ejercicio18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 135, 40));
 
+        jLabel43.setBackground(new java.awt.Color(255, 255, 255));
         jLabel43.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel43.setForeground(new java.awt.Color(255, 255, 255));
         jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel43.setText("Ejercicio 9");
         jPanel2.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 135, 40));
@@ -740,7 +790,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel2.add(Ejercicio19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 135, 40));
 
+        jLabel44.setBackground(new java.awt.Color(255, 255, 255));
         jLabel44.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(255, 255, 255));
         jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel44.setText("Ejercicio 10");
         jPanel2.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 135, 40));
@@ -752,7 +804,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel2.add(Ejercicio20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 135, 40));
 
+        jLabel45.setBackground(new java.awt.Color(255, 255, 255));
         jLabel45.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
         jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel45.setText("Tiempo (s)");
         jPanel2.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 135, 40));
@@ -765,7 +819,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel2.add(Tiempo16, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 135, 40));
 
+        jLabel46.setBackground(new java.awt.Color(255, 255, 255));
         jLabel46.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel46.setForeground(new java.awt.Color(255, 255, 255));
         jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel46.setText("Tiempo (s)");
         jPanel2.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 135, 40));
@@ -778,7 +834,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel2.add(Tiempo17, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 135, 40));
 
+        jLabel47.setBackground(new java.awt.Color(255, 255, 255));
         jLabel47.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(255, 255, 255));
         jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel47.setText("Tiempo (s)");
         jPanel2.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 135, 40));
@@ -791,7 +849,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel2.add(Tiempo18, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 135, 40));
 
+        jLabel48.setBackground(new java.awt.Color(255, 255, 255));
         jLabel48.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(255, 255, 255));
         jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel48.setText("Tiempo (s)");
         jPanel2.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 135, 40));
@@ -804,7 +864,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel2.add(Tiempo19, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 135, 40));
 
+        jLabel49.setBackground(new java.awt.Color(255, 255, 255));
         jLabel49.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel49.setForeground(new java.awt.Color(255, 255, 255));
         jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel49.setText("Tiempo (s)");
         jPanel2.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 135, 40));
@@ -817,7 +879,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel2.add(Tiempo20, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, 135, 40));
 
+        jLabel50.setBackground(new java.awt.Color(255, 255, 255));
         jLabel50.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel50.setForeground(new java.awt.Color(255, 255, 255));
         jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel50.setText("Repeticiones");
         jPanel2.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 135, 40));
@@ -830,7 +894,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel2.add(Repeticiones6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 50, 135, 40));
 
+        jLabel51.setBackground(new java.awt.Color(255, 255, 255));
         jLabel51.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel51.setForeground(new java.awt.Color(255, 255, 255));
         jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel51.setText("Repeticiones");
         jPanel2.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 90, 135, 40));
@@ -843,7 +909,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel2.add(Repeticiones7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 130, 135, 40));
 
+        jLabel52.setBackground(new java.awt.Color(255, 255, 255));
         jLabel52.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel52.setForeground(new java.awt.Color(255, 255, 255));
         jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel52.setText("Repeticiones");
         jPanel2.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 135, 40));
@@ -856,7 +924,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel2.add(Repeticiones8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 210, 135, 40));
 
+        jLabel53.setBackground(new java.awt.Color(255, 255, 255));
         jLabel53.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel53.setForeground(new java.awt.Color(255, 255, 255));
         jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel53.setText("Repeticiones");
         jPanel2.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 135, 40));
@@ -869,7 +939,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel2.add(Repeticiones9, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 290, 135, 40));
 
+        jLabel54.setBackground(new java.awt.Color(255, 255, 255));
         jLabel54.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel54.setForeground(new java.awt.Color(255, 255, 255));
         jLabel54.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel54.setText("Repeticiones");
         jPanel2.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 330, 135, 40));
@@ -882,7 +954,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel2.add(Repeticiones10, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 370, 135, 40));
 
+        jLabel55.setBackground(new java.awt.Color(255, 255, 255));
         jLabel55.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel55.setForeground(new java.awt.Color(255, 255, 255));
         jLabel55.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel55.setText("Series");
         jPanel2.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 330, 60, 40));
@@ -902,7 +976,9 @@ public class AddAsistencia extends javax.swing.JPanel {
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel56.setBackground(new java.awt.Color(255, 255, 255));
         jLabel56.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel56.setForeground(new java.awt.Color(255, 255, 255));
         jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel56.setText("Ejercicio 11");
         jPanel3.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 135, 40));
@@ -914,7 +990,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel3.add(Ejercicio21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 135, 40));
 
+        jLabel57.setBackground(new java.awt.Color(255, 255, 255));
         jLabel57.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel57.setForeground(new java.awt.Color(255, 255, 255));
         jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel57.setText("Ejercicio 12");
         jPanel3.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 135, 40));
@@ -926,7 +1004,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel3.add(Ejercicio22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 135, 40));
 
+        jLabel58.setBackground(new java.awt.Color(255, 255, 255));
         jLabel58.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel58.setForeground(new java.awt.Color(255, 255, 255));
         jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel58.setText("Ejercicio 13");
         jPanel3.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 135, 40));
@@ -938,7 +1018,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel3.add(Ejercicio23, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 135, 40));
 
+        jLabel59.setBackground(new java.awt.Color(255, 255, 255));
         jLabel59.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel59.setForeground(new java.awt.Color(255, 255, 255));
         jLabel59.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel59.setText("Ejercicio 14");
         jPanel3.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 135, 40));
@@ -950,7 +1032,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel3.add(Ejercicio24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 135, 40));
 
+        jLabel60.setBackground(new java.awt.Color(255, 255, 255));
         jLabel60.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel60.setForeground(new java.awt.Color(255, 255, 255));
         jLabel60.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel60.setText("Ejercicio 15");
         jPanel3.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 135, 40));
@@ -962,7 +1046,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel3.add(Ejercicio25, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 135, 40));
 
+        jLabel61.setBackground(new java.awt.Color(255, 255, 255));
         jLabel61.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel61.setForeground(new java.awt.Color(255, 255, 255));
         jLabel61.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel61.setText("Tiempo (s)");
         jPanel3.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 135, 40));
@@ -975,7 +1061,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel3.add(Tiempo21, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 135, 40));
 
+        jLabel62.setBackground(new java.awt.Color(255, 255, 255));
         jLabel62.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel62.setForeground(new java.awt.Color(255, 255, 255));
         jLabel62.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel62.setText("Tiempo (s)");
         jPanel3.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 135, 40));
@@ -988,7 +1076,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel3.add(Tiempo22, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 135, 40));
 
+        jLabel63.setBackground(new java.awt.Color(255, 255, 255));
         jLabel63.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel63.setForeground(new java.awt.Color(255, 255, 255));
         jLabel63.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel63.setText("Tiempo (s)");
         jPanel3.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 135, 40));
@@ -1001,7 +1091,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel3.add(Tiempo23, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 135, 40));
 
+        jLabel64.setBackground(new java.awt.Color(255, 255, 255));
         jLabel64.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel64.setForeground(new java.awt.Color(255, 255, 255));
         jLabel64.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel64.setText("Tiempo (s)");
         jPanel3.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 135, 40));
@@ -1014,7 +1106,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel3.add(Tiempo24, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 135, 40));
 
+        jLabel65.setBackground(new java.awt.Color(255, 255, 255));
         jLabel65.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel65.setForeground(new java.awt.Color(255, 255, 255));
         jLabel65.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel65.setText("Tiempo (s)");
         jPanel3.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 135, 40));
@@ -1027,7 +1121,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel3.add(Tiempo25, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, 135, 40));
 
+        jLabel66.setBackground(new java.awt.Color(255, 255, 255));
         jLabel66.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel66.setForeground(new java.awt.Color(255, 255, 255));
         jLabel66.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel66.setText("Repeticiones");
         jPanel3.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 135, 40));
@@ -1040,7 +1136,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel3.add(Repeticiones11, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 50, 135, 40));
 
+        jLabel67.setBackground(new java.awt.Color(255, 255, 255));
         jLabel67.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel67.setForeground(new java.awt.Color(255, 255, 255));
         jLabel67.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel67.setText("Repeticiones");
         jPanel3.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 90, 135, 40));
@@ -1053,7 +1151,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel3.add(Repeticiones12, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 130, 135, 40));
 
+        jLabel68.setBackground(new java.awt.Color(255, 255, 255));
         jLabel68.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel68.setForeground(new java.awt.Color(255, 255, 255));
         jLabel68.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel68.setText("Repeticiones");
         jPanel3.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 135, 40));
@@ -1066,7 +1166,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel3.add(Repeticiones13, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 210, 135, 40));
 
+        jLabel69.setBackground(new java.awt.Color(255, 255, 255));
         jLabel69.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel69.setForeground(new java.awt.Color(255, 255, 255));
         jLabel69.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel69.setText("Repeticiones");
         jPanel3.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 135, 40));
@@ -1079,7 +1181,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel3.add(Repeticiones14, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 290, 135, 40));
 
+        jLabel70.setBackground(new java.awt.Color(255, 255, 255));
         jLabel70.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel70.setForeground(new java.awt.Color(255, 255, 255));
         jLabel70.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel70.setText("Repeticiones");
         jPanel3.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 330, 135, 40));
@@ -1092,7 +1196,9 @@ public class AddAsistencia extends javax.swing.JPanel {
         });
         jPanel3.add(Repeticiones15, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 370, 135, 40));
 
+        jLabel71.setBackground(new java.awt.Color(255, 255, 255));
         jLabel71.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        jLabel71.setForeground(new java.awt.Color(255, 255, 255));
         jLabel71.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel71.setText("Series");
         jPanel3.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 330, 60, 40));

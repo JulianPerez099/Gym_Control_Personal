@@ -31,23 +31,23 @@ public class AddUser extends javax.swing.JPanel {
 
     private void InitStyles() throws ParseException {
         //Colores de los Labels
-        jLabel1.setForeground(Color.black);
-        jLabel2.setForeground(Color.black);
-        jLabel3.setForeground(Color.black);
-        jLabel4.setForeground(Color.black);
-        jLabel5.setForeground(Color.black);
-        jLabel6.setForeground(Color.black);
-        jLabel7.setForeground(Color.black);
-        jLabel9.setForeground(Color.black);
-        jLabel10.setForeground(Color.black);
-        jLabel11.setForeground(Color.black);
-        jLabel12.setForeground(Color.black);
-        jLabel13.setForeground(Color.black);
-        jLabel14.setForeground(Color.black);
-        jLabel15.setForeground(Color.black);
-        jLabel16.setForeground(Color.black);
-        jLabel17.setForeground(Color.black);
-        jLabel18.setForeground(Color.black);
+        jLabel1.setForeground(Color.white);
+        jLabel2.setForeground(Color.white);
+        jLabel3.setForeground(Color.white);
+        jLabel4.setForeground(Color.white);
+        jLabel5.setForeground(Color.white);
+        jLabel6.setForeground(Color.white);
+        jLabel7.setForeground(Color.white);
+        jLabel9.setForeground(Color.white);
+        jLabel10.setForeground(Color.white);
+        jLabel11.setForeground(Color.white);
+        jLabel12.setForeground(Color.white);
+        jLabel13.setForeground(Color.white);
+        jLabel14.setForeground(Color.white);
+        jLabel15.setForeground(Color.white);
+        jLabel16.setForeground(Color.white);
+        jLabel17.setForeground(Color.white);
+        jLabel18.setForeground(Color.white);
 
         //Colores de los JTextField
         NameUser.setForeground(Color.black);
@@ -157,6 +157,8 @@ public class AddUser extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(871, 451));
         setPreferredSize(new java.awt.Dimension(871, 451));
 
+        bg.setMinimumSize(new java.awt.Dimension(871, 451));
+        bg.setPreferredSize(new java.awt.Dimension(871, 451));
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
@@ -266,7 +268,7 @@ public class AddUser extends javax.swing.JPanel {
                 btn_SaveActionPerformed(evt);
             }
         });
-        bg.add(btn_Save, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 404, 300, 45));
+        bg.add(btn_Save, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 405, 300, 45));
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -415,7 +417,7 @@ public class AddUser extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, 871, Short.MAX_VALUE)
+            .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

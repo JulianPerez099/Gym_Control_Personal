@@ -14,15 +14,9 @@ import javax.swing.JOptionPane;
 public class Database {
 
     protected Connection conexion;
-
-    //Server: sql10.freemysqlhosting.net
-    //Name: sql10596857
-    //Username: sql10596857
-    //Password: qzy3VddtJ3
-    //Port number: 3306
     
     private final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private final String DB_URL = "jdbc:mysql://localhost/sosa";
+    private final String DB_URL = "jdbc:mysql://localhost/YOUR_DATABASE_NAME";
 
     private final String USER = "root";
     private final String PASS = "";
