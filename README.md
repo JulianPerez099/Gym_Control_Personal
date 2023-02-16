@@ -10,7 +10,7 @@ Para las asistencias, el sistema te permite registrar nuevas asistencias, editar
 
 Además de estas funcionalidades, el sistema también cuenta con un apartado de login para que los usuarios puedan acceder a las funcionalidades del sistema según sus permisos de acceso.
 
-Por último, el sistema te permite generar un reporte final que calcula cuanto debe cada usuario al finalizar. Esta funcionalidad es muy útil para llevar un control de los pagos y deudas de los usuarios que utilizan tus servicios. En resumen, tu proyecto de control de usuarios en GitHub es una herramienta muy útil para la gestión de usuarios, ejercicios y asistencias, con una funcionalidad adicional de reporte de pagos y acceso controlado por login.
+Por último, el sistema te permite generar un reporte final que calcula cuanto debe cada usuario al finalizar. Esta funcionalidad es muy útil para llevar un control de los pagos y deudas de los usuarios que utilizan tus servicios.
 
 # Login
 
