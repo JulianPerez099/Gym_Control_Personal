@@ -14,30 +14,30 @@ Por último, el sistema te permite generar un reporte final que calcula cuanto d
 
 # Login
 
-![image](https://user-images.githubusercontent.com/103725662/219141064-5a5dce2d-bf65-458e-be95-ef0fb6f779aa.png)
+![login](https://user-images.githubusercontent.com/103725662/219439698-51508b19-1bea-4edb-8ec9-e8aa996e4632.png)
 
 # Dashboard
 
-![Dashboard](https://user-images.githubusercontent.com/103725662/219141404-31f1eacc-1dbd-421c-916c-20c9a82a77e5.jpg)
+![index](https://user-images.githubusercontent.com/103725662/219439732-4d3bedfc-6c0e-4a95-aa5d-712a38ffe31a.png)
 
 # Usuarios
 
-![Users](https://user-images.githubusercontent.com/103725662/219144484-b82e1e38-6b1a-4d37-a355-8be80da74d65.jpg)
+![Users](https://user-images.githubusercontent.com/103725662/219439784-110f214d-a5f4-4ca9-a8e2-f115339d3498.png)
 
-![Add User](https://user-images.githubusercontent.com/103725662/219144633-5d422b1a-0df3-4ce3-b404-125065838cb1.jpg)
+![Add User](https://user-images.githubusercontent.com/103725662/219439885-e044d401-ee34-45a5-89b7-d5d0db2f9b16.png)
 
 # Ejercicios
 
-![Ejercicios](https://user-images.githubusercontent.com/103725662/219144873-bcbfc305-7230-4e4f-85d3-0a7a15ccb901.jpg)
+![Ejercicios](https://user-images.githubusercontent.com/103725662/219439924-633f6477-f70a-41a7-9d6c-d6bfabfaa539.png)
 
-![Add Ejercicio](https://user-images.githubusercontent.com/103725662/219144957-891bc64b-1ef8-4c16-9fe9-7e90a34ff237.jpg)
+![Add Ejercicio](https://user-images.githubusercontent.com/103725662/219439963-05320c17-00db-4b5e-addb-f3ee3c66adef.png)
 
 # Asistencia
 
-![Asistencia](https://user-images.githubusercontent.com/103725662/219145295-6f009270-32fb-48b3-869c-97fa4e78309e.jpg)
+![Asistencia](https://user-images.githubusercontent.com/103725662/219439993-a651c6ac-7d02-44af-ab2e-fe46f566dcd9.png)
 
-![Add Asistencia](https://user-images.githubusercontent.com/103725662/219145366-f2429c29-16b7-41dc-b18d-51b994258a86.jpg)
+![Add Asistencia](https://user-images.githubusercontent.com/103725662/219440017-5b0bd636-b995-404c-8a41-38d5286884a9.png)
 
 # Reportes
 
-![Reportes](https://user-images.githubusercontent.com/103725662/219145500-20c7f62b-874f-4f66-a8d2-31c8dcd2452c.jpg)
+![Reports](https://user-images.githubusercontent.com/103725662/219440037-385fb0aa-3f4b-47bd-8029-e71c0d6c649b.png)
