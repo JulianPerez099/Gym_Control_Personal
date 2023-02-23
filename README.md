@@ -41,3 +41,5 @@ Por último, el sistema te permite generar un reporte final que calcula cuanto d
 # Reportes
 
 ![Reports](https://user-images.githubusercontent.com/103725662/219440037-385fb0aa-3f4b-47bd-8029-e71c0d6c649b.png)
+
+# Requisitos Java 18
