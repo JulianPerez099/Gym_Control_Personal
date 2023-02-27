@@ -28,9 +28,9 @@ Por último, el sistema te permite generar un reporte final que calcula cuanto d
 
 # Ejercicios
 
-![Ejercicios](https://user-images.githubusercontent.com/103725662/219439924-633f6477-f70a-41a7-9d6c-d6bfabfaa539.png)
+![Ejercicio Todos](https://user-images.githubusercontent.com/103725662/221682162-96912aa2-e36f-4093-881c-2f7ac8fea070.jpg)
 
-![Add Ejercicio](https://user-images.githubusercontent.com/103725662/219439963-05320c17-00db-4b5e-addb-f3ee3c66adef.png)
+![Guardar Ejercicio](https://user-images.githubusercontent.com/103725662/221682224-71c59640-c737-4167-9cf3-581fb7458d73.jpg)
 
 # Asistencia
 
