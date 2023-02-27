@@ -1,6 +1,7 @@
 package com.mycompany.views.vistas;
 
 import com.mycompany.interfaces.DAOrutinas;
+import com.mycompany.models.Rutinas;
 import com.mycompany.personal_sosa.DAOrutinasImpl;
 import com.mycompany.personal_sosa.Dashboard;
 import java.awt.Color;
@@ -8,6 +9,14 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import java.awt.Component;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JTable;
+import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.TableColumn;
 
 public class SearchTrain extends javax.swing.JPanel {
 
@@ -23,11 +32,37 @@ public class SearchTrain extends javax.swing.JPanel {
         userSearch.putClientProperty("JTextField.placeholderText", "Ingrese el Nombre/Categoria/Nivel del ejercicio a buscar.");
     }
 
+    public class ImageTableCellRenderer extends DefaultTableCellRenderer {
+
+        private final JLabel label = new JLabel();
+
+        @Override
+        public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+
+            if (value instanceof byte[]) {
+                byte[] bytes = (byte[]) value;
+                ImageIcon icon = new ImageIcon(bytes);
+                Image img = icon.getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH); // ajustar tamaño de imagen
+                label.setIcon(new ImageIcon(img));
+            } else {
+                label.setIcon(null);
+            }
+            return label;
+        }
+    }
+
     private void LoadTrain() {
         try {
             DAOrutinas dao = new DAOrutinasImpl();
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-            dao.listar("", "", "").forEach((u -> model.addRow(new Object[]{u.getID_Rutina(), u.getNombre_Ejercicio(), u.getTipo_de_Ejercicio(), u.getNivel_del_Ejercicio(), u.getDescripcion_ejercicio()})));
+            model.setRowCount(0); // borrar datos anteriores
+            dao.listar("", "", "").forEach((u -> model.addRow(new Object[]{u.getID_Rutina(), u.getNombre_Ejercicio(), u.getTipo_de_Ejercicio(), u.getNivel_del_Ejercicio(), u.getDescripcion_ejercicio(), u.getImagen_Ejercicio()})));
+
+            // establecer el renderizador para la columna de la imagen
+            TableColumn column = jTable1.getColumnModel().getColumn(5); // asumiendo que la columna de la imagen es la sexta (índice 5)
+            column.setCellRenderer(new ImageTableCellRenderer());
+            column.setPreferredWidth(200); // establecer el ancho preferido de la columna
+            jTable1.setRowHeight(150);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -76,14 +111,14 @@ public class SearchTrain extends javax.swing.JPanel {
 
             },
             new String [] {
-                "ID", "Nombre Ejercicio", "Tipo", "Nivel", "Descripcion"
+                "ID", "Nombre Ejercicio", "Tipo", "Nivel", "Descripcion", "Imagen"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Byte.class
             };
             boolean[] canEdit = new boolean [] {
-                false, true, true, true, true
+                false, true, true, true, true, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -236,13 +271,18 @@ public class SearchTrain extends javax.swing.JPanel {
                 int ID_Rutina = (int) jTable1.getValueAt(jTable1.getSelectedRow(), 0);
                 DAOrutinas dao = new DAOrutinasImpl();
 
-                Dashboard.ShowPanel(new AddTrain(dao.getRutinasById(ID_Rutina)));
+                Rutinas rutina = dao.getRutinasById(ID_Rutina);
+                AddTrain addTrainPanel = new AddTrain(rutina);
+                Dashboard.ShowPanel(addTrainPanel);
+                // cargar los datos de la rutina en el panel de edición
+                addTrainPanel.cargarRutina(rutina);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         } else {
             javax.swing.JOptionPane.showMessageDialog(this, "Debes seleccionar el ejercicio a editar.\n", "AVISO", javax.swing.JOptionPane.ERROR_MESSAGE);
         }
+
     }//GEN-LAST:event_editButtonActionPerformed
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed

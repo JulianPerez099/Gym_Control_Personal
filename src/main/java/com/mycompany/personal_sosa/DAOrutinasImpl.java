@@ -3,6 +3,7 @@ package com.mycompany.personal_sosa;
 import com.mycompany.DB.Database;
 import com.mycompany.interfaces.DAOrutinas;
 import com.mycompany.models.Rutinas;
+import java.io.FileInputStream;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -18,11 +19,15 @@ public class DAOrutinasImpl extends Database implements DAOrutinas {
     public void registrar(Rutinas rutina) throws Exception {
         try {
             this.Conectar();
-            PreparedStatement st1 = this.conexion.prepareStatement("INSERT INTO ejercicios (Nombre_Ejercicio,Tipo_de_Ejercicio,Nivel_del_Ejercicio,Descripcion_ejercicio) VALUES (?,?,?,?);");
+            FileInputStream archivofoto;
+            PreparedStatement st1 = this.conexion.prepareStatement("INSERT INTO ejercicios (Nombre_Ejercicio,Tipo_de_Ejercicio,Nivel_del_Ejercicio,Descripcion_ejercicio,Imagen_Ejercicio,Imagen_Texto) VALUES (?,?,?,?,?,?);");
             st1.setString(1, rutina.getNombre_Ejercicio());
             st1.setString(2, rutina.getTipo_de_Ejercicio());
             st1.setString(3, rutina.getNivel_del_Ejercicio());
             st1.setString(4, rutina.getDescripcion_ejercicio());
+            st1.setString(6, rutina.getImagen_Texto());
+            archivofoto = new FileInputStream(rutina.getImagen_Texto());
+            st1.setBinaryStream(5, archivofoto);
             st1.executeUpdate();
             st1.close();
         } catch (Exception e) {
@@ -36,12 +41,16 @@ public class DAOrutinasImpl extends Database implements DAOrutinas {
     public void modificar(Rutinas rutina) throws Exception {
         try {
             this.Conectar();
-            PreparedStatement st = this.conexion.prepareStatement("UPDATE ejercicios SET Nombre_Ejercicio = ?,Tipo_de_Ejercicio = ?,Nivel_del_Ejercicio = ?,Descripcion_ejercicio = ? WHERE id_ejercicio = ?;");
+            FileInputStream archivofoto;
+            PreparedStatement st = this.conexion.prepareStatement("UPDATE ejercicios SET Nombre_Ejercicio = ?,Tipo_de_Ejercicio = ?,Nivel_del_Ejercicio = ?,Descripcion_ejercicio = ?,Imagen_Ejercicio = ?,Imagen_Texto = ? WHERE id_ejercicio = ?;");
             st.setString(1, rutina.getNombre_Ejercicio());
             st.setString(2, rutina.getTipo_de_Ejercicio());
             st.setString(3, rutina.getNivel_del_Ejercicio());
             st.setString(4, rutina.getDescripcion_ejercicio());
-            st.setInt(5, rutina.getID_Rutina());
+            st.setString(6, rutina.getImagen_Texto());
+            archivofoto = new FileInputStream(rutina.getImagen_Texto());
+            st.setBinaryStream(5, archivofoto);
+            st.setInt(7, rutina.getID_Rutina());
             st.executeUpdate();
             st.close();
         } catch (Exception e) {
@@ -82,6 +91,7 @@ public class DAOrutinasImpl extends Database implements DAOrutinas {
                 personal.setTipo_de_Ejercicio(rs.getString("Tipo_de_Ejercicio"));
                 personal.setNivel_del_Ejercicio(rs.getString("Nivel_del_Ejercicio"));
                 personal.setDescripcion_ejercicio(rs.getString("Descripcion_ejercicio"));
+                personal.setImagen_Ejercicio(rs.getBytes("Imagen_Ejercicio"));
                 lista.add(personal);
             }
             rs.close();
@@ -108,6 +118,8 @@ public class DAOrutinasImpl extends Database implements DAOrutinas {
                 rutina.setTipo_de_Ejercicio(rs.getString("Tipo_de_Ejercicio"));
                 rutina.setNivel_del_Ejercicio(rs.getString("Nivel_del_Ejercicio"));
                 rutina.setDescripcion_ejercicio(rs.getString("Descripcion_ejercicio"));
+                rutina.setImagen_Ejercicio(rs.getBytes("Imagen_Ejercicio"));
+                rutina.setImagen_Texto(rs.getString("Imagen_Texto"));
             }
             rs.close();
             st.close();

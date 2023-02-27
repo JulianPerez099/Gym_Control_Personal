@@ -4,8 +4,17 @@ import com.mycompany.interfaces.DAOrutinas;
 import com.mycompany.models.Rutinas;
 import com.mycompany.personal_sosa.DAOrutinasImpl;
 import java.awt.Color;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.IOException;
 import java.text.ParseException;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -34,11 +43,13 @@ public class AddTrain extends javax.swing.JPanel {
         jLabel1.setForeground(Color.white);
         jLabel2.setForeground(Color.white);
         jLabel3.setForeground(Color.white);
+        jLabel4.setForeground(Color.white);
         NameTrain.putClientProperty("JTextField.placeholderText", "Ingrese el nombre del ejercicio.");
         jTextArea1.putClientProperty("JTextField.placeholderText", "Ingrese una descripcion del ejercicio.");
         NameTrain.setForeground(Color.black);
         TypeTrain.setForeground(Color.black);
         CategoryItems.setForeground(Color.black);
+        ImageText.setForeground(Color.black);
         jTextArea1.setForeground(Color.black);
 
         if (isEdition) {
@@ -71,17 +82,22 @@ public class AddTrain extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         CategoryItems = new javax.swing.JComboBox<>();
         btn_Save = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         image = new javax.swing.JLabel();
         header = new javax.swing.JPanel();
         navtext = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        btn_Seleccionar = new javax.swing.JButton();
+        ImageText = new javax.swing.JTextField();
+        ImagenLabel = new javax.swing.JLabel();
 
         setMaximumSize(new java.awt.Dimension(871, 451));
         setMinimumSize(new java.awt.Dimension(871, 451));
         setPreferredSize(new java.awt.Dimension(871, 451));
 
-        bg.setPreferredSize(new java.awt.Dimension(851, 471));
+        bg.setPreferredSize(new java.awt.Dimension(871, 451));
+        bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -142,18 +158,12 @@ public class AddTrain extends javax.swing.JPanel {
         });
         jPanel1.add(btn_Save, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 404, 300, 45));
 
-        image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pexels-eduardo-romero-1886487.jpg"))); // NOI18N
-        jPanel1.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 450));
+        jLabel4.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Descripción");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 300, 40));
 
-        header.setBackground(new java.awt.Color(13, 71, 161));
-        header.setPreferredSize(new java.awt.Dimension(744, 150));
-        header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        navtext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        navtext.setText("Descripción");
-        navtext.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        header.add(navtext, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 80));
-
+        jScrollPane1.setBackground(new java.awt.Color(0, 0, 0));
         jScrollPane1.setBorder(null);
 
         jTextArea1.setColumns(20);
@@ -161,41 +171,74 @@ public class AddTrain extends javax.swing.JPanel {
         jTextArea1.setBorder(null);
         jScrollPane1.setViewportView(jTextArea1);
 
-        javax.swing.GroupLayout bgLayout = new javax.swing.GroupLayout(bg);
-        bg.setLayout(bgLayout);
-        bgLayout.setHorizontalGroup(
-            bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bgLayout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(0, 0, 0)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 570, Short.MAX_VALUE)
-                .addGap(1, 1, 1))
-            .addGroup(bgLayout.createSequentialGroup()
-                .addGap(294, 294, 294)
-                .addComponent(header, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 300, 124));
+
+        image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pexels-eduardo-romero-1886487.jpg"))); // NOI18N
+        jPanel1.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 450));
+
+        bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        header.setBackground(new java.awt.Color(13, 71, 161));
+        header.setPreferredSize(new java.awt.Dimension(744, 150));
+
+        navtext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        navtext.setText("Imagen");
+        navtext.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
+        header.setLayout(headerLayout);
+        headerLayout.setHorizontalGroup(
+            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(navtext, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-        bgLayout.setVerticalGroup(
-            bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(bgLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(jScrollPane1))
-            .addGroup(bgLayout.createSequentialGroup()
-                .addComponent(header, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addGap(370, 370, 370))
+        headerLayout.setVerticalGroup(
+            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(navtext, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
+
+        bg.add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 570, 80));
+
+        btn_Seleccionar.setBackground(new java.awt.Color(13, 71, 161));
+        btn_Seleccionar.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        btn_Seleccionar.setForeground(new java.awt.Color(255, 255, 255));
+        btn_Seleccionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Select_Image.png"))); // NOI18N
+        btn_Seleccionar.setText("Seleccionar Imagen");
+        btn_Seleccionar.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        btn_Seleccionar.setBorderPainted(false);
+        btn_Seleccionar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_Seleccionar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_Seleccionar.setIconTextGap(20);
+        btn_Seleccionar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_SeleccionarActionPerformed(evt);
+            }
+        });
+        bg.add(btn_Seleccionar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 404, 570, 45));
+
+        ImageText.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        ImageText.setFocusable(false);
+        ImageText.setName(""); // NOI18N
+        ImageText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ImageTextActionPerformed(evt);
+            }
+        });
+        bg.add(ImageText, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 404, 570, 45));
+
+        ImagenLabel.setBackground(new java.awt.Color(255, 255, 255));
+        bg.add(ImagenLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 80, 570, 324));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, 871, Short.MAX_VALUE)
+            .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 883, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addGap(1, 1, 1)
-                .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, 450, Short.MAX_VALUE))
+                .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -211,12 +254,40 @@ public class AddTrain extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_CategoryItemsActionPerformed
 
+    public void cargarRutina(Rutinas rutina) {
+        NameTrain.setText(rutina.getNombre_Ejercicio());
+        TypeTrain.setSelectedItem(rutina.getTipo_de_Ejercicio());
+        CategoryItems.setSelectedItem(rutina.getNivel_del_Ejercicio());
+        jTextArea1.setText(rutina.getDescripcion_ejercicio());
+        ImageText.setText(rutina.getImagen_Texto());
+        
+        // cargar la imagen en ImagenLabel
+        byte[] imagenBytes = rutina.getImagen_Ejercicio();
+        if (imagenBytes != null) {
+            try {
+                BufferedImage imagen = ImageIO.read(new ByteArrayInputStream(imagenBytes));
+                int labelWidth = 570;
+                int labelHeight = 324;
+                Image resizedImage = imagen.getScaledInstance(labelWidth, labelHeight, Image.SCALE_SMOOTH);
+                ImagenLabel.setIcon(new ImageIcon(resizedImage));
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(null, "Error al cargar la imagen", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }
+
     private void btn_SaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SaveActionPerformed
         //Declaracion de variables
         String ejercicio = NameTrain.getText();
         String tipo = (String) TypeTrain.getSelectedItem();
         String categoria = (String) CategoryItems.getSelectedItem();
         String descripcion = jTextArea1.getText();
+        String textoimagen = ImageText.getText();
+        
+        if (ImageText.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Seleccione una imagen.", "Advertencia", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
 
         if (TypeTrain.getSelectedItem() == "Seleccione") {
             JOptionPane.showMessageDialog(null, "Indique el tipo de ejercicio.", "Advertencia", JOptionPane.WARNING_MESSAGE);
@@ -231,6 +302,7 @@ public class AddTrain extends javax.swing.JPanel {
         user.setTipo_de_Ejercicio(tipo);
         user.setNivel_del_Ejercicio(categoria);
         user.setDescripcion_ejercicio(descripcion);
+        user.setImagen_Texto(textoimagen);
 
         try {
             DAOrutinas dao = new DAOrutinasImpl();
@@ -248,6 +320,7 @@ public class AddTrain extends javax.swing.JPanel {
                 CategoryItems.setSelectedItem("Seleccione");
                 TypeTrain.setSelectedItem("Seleccione");
                 jTextArea1.setText(null);
+                ImageText.setText(null);
             }
         } catch (Exception e) {
             String ErrorMsg = isEdition ? "Actualizar" : "Registrar";
@@ -257,18 +330,53 @@ public class AddTrain extends javax.swing.JPanel {
 
     }//GEN-LAST:event_btn_SaveActionPerformed
 
+    private void btn_SeleccionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SeleccionarActionPerformed
+        FileNameExtensionFilter filtro = new FileNameExtensionFilter("*.JPG,*.JPEG,*.PNG,*.GIF", "jpg", "jpeg", "png", "gif");
+        JFileChooser archivo = new JFileChooser();
+        archivo.setFileFilter(filtro);
+        int ventana = archivo.showOpenDialog(null);
+        if (ventana == JFileChooser.APPROVE_OPTION) {
+            File file = archivo.getSelectedFile();
+            ImageText.setText(file.getAbsolutePath());
+            try {
+                // Obtener las dimensiones del JLabel
+                int labelWidth = 570;
+                int labelHeight = 324;
+
+                // Leer la imagen del archivo seleccionado
+                Image foto = ImageIO.read(file);
+
+                // Escalar la imagen para que se ajuste al tamaño del JLabel
+                foto = foto.getScaledInstance(labelWidth, labelHeight, java.awt.Image.SCALE_SMOOTH);
+
+                // Establecer la imagen en el JLabel
+                ImagenLabel.setIcon(new ImageIcon(foto));
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(null, "Error al cargar la imagen", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_btn_SeleccionarActionPerformed
+
+    private void ImageTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ImageTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ImageTextActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> CategoryItems;
+    private javax.swing.JTextField ImageText;
+    private javax.swing.JLabel ImagenLabel;
     private javax.swing.JTextField NameTrain;
     private javax.swing.JComboBox<String> TypeTrain;
     private javax.swing.JPanel bg;
     private javax.swing.JButton btn_Save;
+    private javax.swing.JButton btn_Seleccionar;
     private javax.swing.JPanel header;
     private javax.swing.JLabel image;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;

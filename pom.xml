@@ -35,11 +35,6 @@
             <version>SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>RSScaleLabel</groupId>
-            <artifactId>rsscalelabel.RSScaleLabel</artifactId>
-            <version>1.0</version>
-        </dependency>
-        <dependency>
             <groupId>com.toedter</groupId>
             <artifactId>jcalendar</artifactId>
             <version>1.4</version>

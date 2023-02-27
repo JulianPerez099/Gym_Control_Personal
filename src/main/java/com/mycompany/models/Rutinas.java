@@ -15,6 +15,24 @@ public class Rutinas {
     private String Repeticiones;
     private String Tiempo;
     private String Series;
+    private byte[] Imagen_Ejercicio;
+    private String Imagen_Texto;
+
+    public void setImagen_Texto(String Imagen_Texto) {
+        this.Imagen_Texto = Imagen_Texto;
+    }
+
+    public String getImagen_Texto() {
+        return Imagen_Texto;
+    }
+
+    public void setImagen_Ejercicio(byte[] Imagen_Ejercicio) {
+        this.Imagen_Ejercicio = Imagen_Ejercicio;
+    }
+
+    public byte[] getImagen_Ejercicio() {
+        return Imagen_Ejercicio;
+    }
 
     public void setId_ejercicio(int id_ejercicio) {
         this.id_ejercicio = id_ejercicio;
