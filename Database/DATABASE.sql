@@ -5,19 +5,21 @@ CREATE TABLE `detallesdebe` (
   `ID_Usuario` int(11) DEFAULT NULL,
   `Debe` varchar(255) DEFAULT NULL,
   `Total_Deuda` double DEFAULT NULL
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
 CREATE TABLE `ejercicios` (
   `id_ejercicio` int(11) NOT NULL,
   `Nombre_Ejercicio` varchar(255) DEFAULT NULL,
   `Tipo_de_Ejercicio` varchar(255) DEFAULT NULL,
   `Nivel_del_Ejercicio` varchar(255) DEFAULT NULL,
-  `Descripcion_ejercicio` varchar(255) DEFAULT NULL
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+  `Descripcion_ejercicio` varchar(255) DEFAULT NULL,
+  `Imagen_Ejercicio` longblob DEFAULT NULL,
+  `Imagen_Texto` varchar(255) NOT NULL
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
 CREATE TABLE `enfermedades` (
   `id_enfermedad` int(11) NOT NULL,
   `id_usuario` int(11) DEFAULT NULL,
   `Enfermedades_Usuario` varchar(255) DEFAULT NULL
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
 CREATE TABLE `entrenamientos` (
   `id_entrenamiento` int(11) NOT NULL,
   `id_usuario` int(11) DEFAULT NULL,
@@ -28,7 +30,7 @@ CREATE TABLE `entrenamientos` (
   `id_Rutinas` int(11) DEFAULT NULL,
   `id_debe` int(11) DEFAULT NULL,
   `Fecha_de_Entrenamiento` varchar(255) DEFAULT NULL
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
 CREATE TABLE `informacion_fisica` (
   `id_informacion_fisica` int(11) NOT NULL,
   `id_usuario` int(11) DEFAULT NULL,
@@ -36,26 +38,26 @@ CREATE TABLE `informacion_fisica` (
   `Talla_Usuario` double DEFAULT NULL,
   `Perimetro_Usuario` double DEFAULT NULL,
   `IMC_Usuario` double DEFAULT NULL
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
 CREATE TABLE `lesiones` (
   `id_lesion` int(11) NOT NULL,
   `id_usuario` int(11) DEFAULT NULL,
   `Lesiones_Usuario` varchar(255) DEFAULT NULL
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
 CREATE TABLE `login` (
   `ID_Login` int(11) NOT NULL,
   `User` varchar(255) NOT NULL,
   `Password` varchar(255) NOT NULL
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
 INSERT INTO
   `login` (`ID_Login`, `User`, `Password`)
 VALUES
-  (1, 'Admin', 'Felipe.Sosa$Admin#1234');
+  (1, 'Admin', '$Admin#1234');
 CREATE TABLE `medicamentos` (
     `id_medicamento` int(11) NOT NULL,
     `id_usuario` int(11) DEFAULT NULL,
     `Medicamentos_Usuario` varchar(255) DEFAULT NULL
-  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
 CREATE TABLE `repeticiones` (
     `id_Repeticiones` int(11) NOT NULL,
     `ID_Usuario` int(11) DEFAULT NULL,
@@ -74,12 +76,12 @@ CREATE TABLE `repeticiones` (
     `Repeticion_13` int(11) DEFAULT NULL,
     `Repeticion_14` int(11) DEFAULT NULL,
     `Repeticion_15` int(11) DEFAULT NULL
-  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
 CREATE TABLE `revisiones_medicas` (
     `id_revision_medica` int(11) NOT NULL,
     `id_usuario` int(11) DEFAULT NULL,
     `Ultima_Revision_Medica_Usuario` varchar(255) DEFAULT NULL
-  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
 CREATE TABLE `rutinas` (
     `id_Rutinas` int(11) NOT NULL,
     `ID_Usuario` int(11) DEFAULT NULL,
@@ -98,14 +100,14 @@ CREATE TABLE `rutinas` (
     `Ejercicio_13` varchar(255) DEFAULT NULL,
     `Ejercicio_14` varchar(255) DEFAULT NULL,
     `Ejercicio_15` varchar(255) DEFAULT NULL
-  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
 CREATE TABLE `series` (
     `id_Series` int(11) NOT NULL,
     `ID_Usuario` int(11) DEFAULT NULL,
     `Serie_1` int(11) DEFAULT NULL,
     `Serie_2` int(11) DEFAULT NULL,
     `Serie_3` int(11) DEFAULT NULL
-  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
 CREATE TABLE `tiempos` (
     `id_Tiempos` int(11) NOT NULL,
     `ID_Usuario` int(11) DEFAULT NULL,
@@ -124,7 +126,7 @@ CREATE TABLE `tiempos` (
     `Tiempo_13` int(11) DEFAULT NULL,
     `Tiempo_14` int(11) DEFAULT NULL,
     `Tiempo_15` int(11) DEFAULT NULL
-  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
 CREATE TABLE `usuarios` (
     `id_usuario` int(11) NOT NULL,
     `ID_Login` int(11) DEFAULT NULL,
@@ -137,7 +139,7 @@ CREATE TABLE `usuarios` (
     `Tiene_Enfermedades_Usuario` varchar(255) DEFAULT NULL,
     `Consume_Medicamentos_Usuario` varchar(255) DEFAULT NULL,
     `Tiene_Lesiones_Usuario` varchar(255) DEFAULT NULL
-  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
 ALTER TABLE
   `detallesdebe`
 ADD
