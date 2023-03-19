@@ -10,5 +10,5 @@ package com.mycompany.interfaces;
  */
 public interface DAOlogin {
 
-    public boolean login(String User, String Password) throws Exception;
+    public boolean login(String UserName, String Password) throws Exception;
 }

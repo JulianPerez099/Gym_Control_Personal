@@ -16,14 +16,14 @@ import java.sql.ResultSet;
 public class DAOloginImpl extends Database implements DAOlogin {
 
     @Override
-    public boolean login(String User, String Password) throws Exception {
+    public boolean login(String UserName, String Password) throws Exception {
         PreparedStatement pst = null;
         ResultSet rs = null;
         this.Conectar();
-        String Query = "SELECT * FROM login WHERE User = ? AND Password = ?";
+        String Query = "SELECT * FROM login WHERE UserName = ? AND Password = ?";
         try {
             pst = conexion.prepareStatement(Query);
-            pst.setString(1, User);
+            pst.setString(1, UserName);
             pst.setString(2, Password);
             rs = pst.executeQuery();
             if (rs.next()) {

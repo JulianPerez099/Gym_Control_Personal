@@ -260,7 +260,7 @@ public class AddTrain extends javax.swing.JPanel {
         CategoryItems.setSelectedItem(rutina.getNivel_del_Ejercicio());
         jTextArea1.setText(rutina.getDescripcion_ejercicio());
         ImageText.setText(rutina.getImagen_Texto());
-        
+
         // cargar la imagen en ImagenLabel
         byte[] imagenBytes = rutina.getImagen_Ejercicio();
         if (imagenBytes != null) {
@@ -283,8 +283,8 @@ public class AddTrain extends javax.swing.JPanel {
         String categoria = (String) CategoryItems.getSelectedItem();
         String descripcion = jTextArea1.getText();
         String textoimagen = ImageText.getText();
-        
-        if (ImageText.getText().isEmpty()){
+
+        if (ImageText.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Seleccione una imagen.", "Advertencia", JOptionPane.WARNING_MESSAGE);
             return;
         }
